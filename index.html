@@ -1,10 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+    <!-- Use Tailwind CSS for easy, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Use a modern, clean font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Custom scrollbar for better aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #6366f1;
+            border-radius: 4px;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #e5e7eb;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold text-indigo-600">MyBrand</a>
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="#features" class="hover:text-indigo-500 transition duration-300">Features</a>
+                <a href="#about" class="hover:text-indigo-500 transition duration-300">About</a>
+                <a href="#contact" class="hover:text-indigo-500 transition duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu-dropdown" class="md:hidden hidden bg-white shadow-lg py-2 mt-2 rounded-md">
+            <a href="#features" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Features</a>
+            <a href="#about" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 px-4 text-center rounded-b-3xl shadow-lg">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">Welcome to a Better Web Experience</h1>
+            <p class="mt-4 text-lg sm:text-xl font-light">
+                This is a fully responsive and modern website template built with pure HTML, Tailwind CSS, and a dash of JavaScript.
+            </p>
+            <button id="main-cta" class="mt-8 bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                Get Started
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-indigo-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.41-1.92L11 9l4.5-5.5a1 1 0 0 1 1.57.92l-4.5 5.5 7.41 3.08a1 1 0 0 1 .41 1.92l-1.91 1.5L14 18l-4.5 5.5a1 1 0 0 1-1.57-.92l4.5-5.5-7.41-3.08z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Blazing Fast</h3>
+                    <p class="text-gray-600">
+                        Optimized for performance to ensure your visitors have a smooth and speedy experience.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-indigo-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fully Responsive</h3>
+                    <p class="text-gray-600">
+                        Looks and works perfectly on any device, from smartphones to large desktop screens.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-indigo-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Easy to Customize</h3>
+                    <p class="text-gray-600">
+                        The code is clean and well-structured, making it simple to modify and expand.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        We are a passionate team dedicated to creating beautiful and functional web experiences. Our goal is to empower individuals and businesses with the tools they need to succeed online. This template is a starting point for your next great idea.
+                    </p>
+                </div>
+                <div class="relative w-full aspect-video rounded-xl shadow-lg overflow-hidden">
+                    <!-- Placeholder image -->
+                    <img src="https://placehold.co/800x450/6366f1/ffffff?text=Placeholder+Image" alt="About Us" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-gray-600 mb-8">
+                Ready to start your project or have a question? Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+            <form class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="mb-4 text-left">
+                    <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                </div>
+                <div class="mb-4 text-left">
+                    <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                </div>
+                <div class="mb-4 text-left">
+                    <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-md shadow-lg hover:bg-indigo-700 transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 px-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 MyBrand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuDropdown = document.getElementById('mobile-menu-dropdown');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenuDropdown.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            const navLinks = mobileMenuDropdown.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuDropdown.classList.add('hidden');
+                });
+            });
+
+            // Handle CTA button click
+            const mainCta = document.getElementById('main-cta');
+            mainCta.addEventListener('click', () => {
+                // A simple message box instead of an alert
+                alert("Thank you for your interest! This is where you would link to another page or a modal.");
+            });
+        });
+    </script>
 </body>
 </html>
